@@ -1,0 +1,15 @@
+set pages:index "<HTML><head></head><body><h1>Welcome from Redis Server!</h1><h2>Your name is: USER_NAME</h2><a href='/login.html'>Login here</a><footer><p>VISITS visits so far</p></footer></body>"
+
+set pages:login "<HTML><head></head><body><h1>Login</h1><form action='/login_process'><label>username: </label><input name='username'/><br/><label>password: </label><input name='password' type='password'/><br/><button type='submit'>Login</button></form></body></HTML>"
+
+set pages:login_process "<HTML><head></head><body><h1>Login Result</h1><h2>The login result is: LOGIN_RESULT</h2><a href='/posts'>Go to Posts</a></body></HTML>"
+
+hset users:1000 name ricardo
+
+hset users:1000 lastname vegas
+
+hset users:1000 username rvegas
+
+hset users:1000 password 1234
+
+hset usersids rvegas 1000
