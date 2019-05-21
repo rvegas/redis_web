@@ -32,8 +32,11 @@ def process_login(username, password):
 
 def get_data(user_id):
     global login_result
+    user_name = get_user_name(user_id)
+    if user_name is None:
+        user_name = b""
     return {
-        'user_name': get_user_name(user_id),
+        'user_name': user_name,
         'login_result': login_result,
         'visits': get_visits(),
     }
